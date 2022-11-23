@@ -1,0 +1,40 @@
+@use 'styleConfig';
+
+.list {
+	@include styleConfig.flexConfig(unset,stretch,column);
+  max-height: 40vh;
+  padding: 0 0.7rem;
+  text-align: left;
+  overflow-y: auto;
+  .item {
+		@include styleConfig.flexConfig(space-between, center);
+    margin: 0.5rem 0;
+    transition: background-color 0.25s ease, border-radius 0.25s ease, text-decoration 0.25s ease;
+    .button {
+			@include styleConfig.button;
+      &.complete {
+        min-width: 7%;
+        &.completed {
+          background-color: styleConfig.$accept-color;
+        }
+        &:hover {
+          background-color: styleConfig.$accept-color;
+        }
+      }
+      &.del:hover {
+        background-color: styleConfig.$danger-color;
+      }
+    }
+    .text {
+      width: 72%;
+      word-break: break-word;
+      &.completed {
+        text-decoration: line-through;
+      }
+    }
+    &.completed {
+      background-color: rgba(0, 0, 0, 0.15);
+      border-radius: 0.5rem;
+    }
+  }
+}

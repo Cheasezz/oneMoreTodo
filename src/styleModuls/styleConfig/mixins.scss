@@ -1,0 +1,19 @@
+@mixin button {
+	min-width: 15%;
+	height: 1.3rem;
+	padding: 0.1rem 0.2rem;
+	line-height: 1;
+	font-size: 0.75rem;
+	background-color: #fff;
+	border: 1px solid;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: background-color 0.25s ease;
+}
+
+@mixin flexConfig($justify-content, $align-items, $flex-direction:row) {
+	display: flex;
+	justify-content: $justify-content;
+	align-items: $align-items;
+	flex-direction: $flex-direction;
+}

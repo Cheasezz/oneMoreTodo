@@ -1,0 +1,59 @@
+@use 'styleConfig';
+
+// Opera & Chrom scrollbar style
+*::-webkit-scrollbar {
+	width: .3rem;
+}
+*::-webkit-scrollbar-thumb {
+	border-radius: .2rem;
+	background-color: styleConfig.$neutral-color;
+}
+
+html {
+  font-size: styleConfig.$index;
+}
+
+.container {
+  text-align: center;
+  padding-top: 5rem;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: conic-gradient(at top right, slategray, white);
+}
+
+.signout {
+	@include styleConfig.button;
+	min-width: fit-content;
+	position: absolute;
+	right: 5%;
+	top: 8%;
+	font-size: 0.9rem;
+	&:hover {
+		background-color: styleConfig.$neutral-color;
+	}
+}
+
+.header{
+	margin-bottom: 1.5rem;
+	span {
+		font-weight: 700;
+	}
+	h2 {
+		font-size: 2.5rem;
+		font-weight: 700;
+	}
+}
+
+
+.todo {
+	max-width: 1200px;
+  width: 45%;
+	// max-height: 910px;
+  height: fit-content;
+  padding: 0.4rem 0;
+  margin: 0 auto;
+  font-size: .9rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}

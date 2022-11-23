@@ -1,0 +1,15 @@
+@media only screen and (max-width: 1200px) {
+	.todo {
+		width: 70%;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.container {
+		padding-top: 11rem;
+	}
+	.todo {
+		width: 95%;
+	}
+
+}
