@@ -1,4 +1,4 @@
-import '@/style.scss';
+import './style.scss';
 import {
   child,
   get,
@@ -18,9 +18,9 @@ import {
   signOut,
   onAuthStateChanged,
 } from 'firebase/auth';
-import { Todo } from '@/jsModuls/todoPage';
-import {Signin} from '@/jsModuls/signinPage'
-import { Utils } from '@/jsModuls/utils';
+import { Todo } from './jsModuls/todoPage';
+import {Signin} from './jsModuls/signinPage'
+import { Utils } from './jsModuls/utils';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyD3iqAsfNA7SXunp4wmvVDub8o8dOe5Mdw',
