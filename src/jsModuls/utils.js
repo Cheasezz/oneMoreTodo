@@ -3,6 +3,22 @@ export class Utils {
     return value.trim() != '';
   }
 
+	static isValidPass(e){
+		const errorLog = document.querySelector('.errorLogSignin')
+		const signinBtn = document.querySelector('.signinForm button')
+		const regexp = new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{6,}', 'g')
+		if(e.target.value.trim().match(regexp)){
+			console.log(true);
+			signinBtn.disabled = false
+			errorLog.textContent = ''
+		} else {
+			console.log(false);
+			signinBtn.disabled = true 
+			errorLog.textContent = 'Password must be more than 6 characters and contain a-z A-Z 0-9'
+		}
+		
+	}
+
   static signinErrorHandler(error) {
     const errorContainer = document.querySelector('.errorLogSignin');
     switch (error.code) {
