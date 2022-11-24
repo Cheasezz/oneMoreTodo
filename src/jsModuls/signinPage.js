@@ -1,5 +1,7 @@
+// import {Utils} from './utils'
+
 export class Signin {
-	static createSigninPage(Auth) {
+	static createSigninPage(Auth, Utils) {
     const signinPage = `
 		<div class="modalContainer">
 			<div class="modalLogin">
@@ -22,23 +24,26 @@ export class Signin {
 		</div>
 		`;
     document.body.insertAdjacentHTML('afterbegin', signinPage);
-    setListenersOnSigninPageItems(Auth);
+    setListenersOnSigninPageItems(Auth, Utils);
   }
 }
 
-function setListenersOnSigninPageItems(Auth) {
+function setListenersOnSigninPageItems(Auth, Utils) {
   // Signin
   document.querySelector('.signinForm').addEventListener('submit', Auth.registerNewUser);
+	document.querySelector('.signinForm input[type=password]').addEventListener('input', Utils.isValidPass)
   // Login
   document.querySelector('.loginForm').addEventListener('submit', Auth.loginUser);
   // Switch login/signin modal
   document.addEventListener('click', (event) => {
     switch (event.target.className) {
       case 'moveToLogin':
+				document.querySelector('.errorLogSignin').textContent = ''
         document.querySelector('.signinForm').style.flex = '0 1 auto';
         document.querySelector('.loginForm').style.flex = 'none';
         break;
       case 'moveToSignin':
+				document.querySelector('.errorLogLogin').textContent = ''
         document.querySelector('.signinForm').style.flex = 'none';
         document.querySelector('.loginForm').style.flex = '0 1 auto';
         break;
