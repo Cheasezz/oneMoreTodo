@@ -121,7 +121,6 @@ class Database {
 
 function renderCurentUsersName() {
   get(child(ref(database), 'users/' + auth.currentUser.uid)).then((snapshot) => {
-    console.log(snapshot.val());
     const user = snapshot.val();
     document.querySelector('.username').append(user.username);
   });
@@ -135,11 +134,9 @@ onAuthStateChanged(auth, (user) => {
       (snapshot) => {
         renderCurentUsersName();
         Todo.renderTodoListAfterRefreshPage(snapshot, Database);
-        console.log(user);
       },
       { onlyOnce: true }
     );
-    console.log(user);
   } else {
     Signin.createSigninPage(Auth, Utils);
   }

@@ -61,9 +61,6 @@ export class Todo {
       text.classList.toggle('completed');
       item.classList.toggle('completed');
     }
-    console.log(task.key);
-    console.log(task.text);
-    console.log(document.querySelector('.list').children.length);
     setListenersOnTodoTaskItems(Database, item, complBtn, text, delBtn, task);
   }
 }
