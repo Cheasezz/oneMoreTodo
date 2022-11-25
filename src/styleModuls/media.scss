@@ -5,11 +5,35 @@
 }
 
 @media only screen and (max-width: 576px) {
-	.container {
-		padding-top: 11rem;
-	}
-	.todo {
-		width: 95%;
+
+	.modalContainer {
+		.modalLogin {
+			width: 40%;
+			height: 30%;
+			form {
+				span {
+					font-size: 1.5rem;
+				}
+				b {
+					font-size: 1.1rem;
+				}
+				button {
+					min-width: 30%;
+					height: 1.7rem;
+					font-size: 1rem;
+				}
+			}
+
+		}
 	}
 
+	.container {
+		padding: 11rem 2rem 0;
+		.todo {
+			width: 95%;
+			.list {
+				max-height: 60vh;
+			}
+		}
+	}
 }
