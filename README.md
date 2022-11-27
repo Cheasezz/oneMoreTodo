@@ -10,6 +10,9 @@
   + firebase auth
 + Bundler 
   + Vite
+  
+> Пожалуйста, не используйте найстоящую почту и пароль!
+  
 ### Окно авторизованного пользователя 
 <a href="https://ibb.co/9vxD84b"><img src="https://i.ibb.co/pPH70Kf/todo-Window.jpg" alt="todo-Window" border="0"></a>
 
