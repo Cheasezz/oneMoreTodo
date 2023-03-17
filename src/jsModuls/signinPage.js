@@ -4,7 +4,8 @@ export class Signin {
 		<div class="modalContainer">
 			<div class="modalLogin">
 				<form class="signinForm">
-					<span class="moveToLogin">LogIn &rsaquo;</span>
+					<h2 class='modalLogin__title'>SignIn</h2>
+					<button type='button' class="moveToLogin">LogIn &rsaquo;</button>
 					<input type="text" class="input" placeholder="Name" required/>
 					<input type="email" class="input" placeholder="Email" required/>
 					<input type="password" class="input" placeholder="Password" required />
@@ -12,7 +13,8 @@ export class Signin {
 					<button type="submit" class="button">SignIn</button>
 				</form>
 				<form class="loginForm">
-					<span class="moveToSignin">&lsaquo; SignIn</span>
+				<h2 class='modalLogin__title'>LogIn</h2>
+					<button type='button' class="moveToSignin">&lsaquo; SignIn</button>
 					<input type="email" class="input" placeholder="Email" required/>
 					<input type="password" class="input" placeholder="Password" required/>
 					<b class="errorLogLogin"></b>

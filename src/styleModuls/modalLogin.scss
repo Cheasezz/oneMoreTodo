@@ -9,14 +9,20 @@
   .modalLogin {
     display: flex;
     width: 20%;
-    height: 30%;
+    height: 40%;
 
     form {
       @include styleConfig.flexConfig(space-evenly, center, column);
       overflow: hidden;
       height: 100%;
       width: 100%;
+			border: 1px solid #fff;
       transition: flex 0.25s ease;
+			.modalLogin__title{
+				font-family: 'Poppins', sans-serif;
+				font-size: 2.5rem;
+				color: #fff;
+			}
       button {
         @include styleConfig.button;
         &:hover {
